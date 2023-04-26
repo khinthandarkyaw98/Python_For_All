@@ -2,7 +2,7 @@
 
 class Item:
     @staticmethod
-    def is_integer():
+    def is_integer(num):
         '''
         This should do something that has a relationship
         with the class, but not something that must be unique
@@ -24,5 +24,5 @@ class Item:
 # NOTE: However, those could be also called from instances.
 
 item1 = Item()
-item1.is_integer()
+item1.is_integer(6)
 item1.instantiate_from_something()
