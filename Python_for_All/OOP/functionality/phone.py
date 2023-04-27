@@ -7,6 +7,7 @@ Its name is super() which allows us to access all attributes of the parent class
 By using super(), we do not need to hard code.
 """
 
+# Phone : child class (Item : parent):
 class Phone(Item):
     # all = []
     def __init__(self, name:str, price:float, quantity:int, broken_phones=0):

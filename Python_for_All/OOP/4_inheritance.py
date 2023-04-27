@@ -50,13 +50,27 @@ class Item:
     def __repr__(self):
         return f"Item('{self.name}', {self.price}, {self.quantity})"
         
-# @staticmethod
+""" # @staticmethod
 # we need to pass an argment        
 print(Item.is_integer('ok'))
 # @classmethod
 # we do not need to pass an arguement when the method is called 
 # as class Item is implicitly passed 
 Item.instantiate_from_csv() 
-print(Item.all)
+print(Item.all) """
         
+
+# child class(parent class):
+class Phone(Item):
+    def __init__(self, name: str, price: float, quantitiy=0, broken_phones=0):
+        # Call to super function to have access to all attributs / methods
+        super().__init__(
+            name, price, quantitiy
+        )
+        
+        # Run validations to the received arguments
+        assert broken_phones >= 0, f"Broken Phones {broken_phones} is not greater than or equal to zero!"
+        
+        # Assign to self object
+        self.broken_phones = broken_phones
         
