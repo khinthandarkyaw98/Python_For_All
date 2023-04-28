@@ -11,3 +11,7 @@ The overview of `00_CALENDAR_ASSIGNMENT` is as follows.
    - return to `main`
 4. ouput
    - return to `main`
+
+Result : 
+
+<img src="Image/result_snippet.png" alt="Image of the result: Calendar" width="300px">
