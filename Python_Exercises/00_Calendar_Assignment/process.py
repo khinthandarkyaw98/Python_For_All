@@ -20,13 +20,23 @@ class Process():
         else:
             return 31
     
-    def get_start_day(self, year:int) -> int:
+    def get_start_day(self, year:int, month:int) -> int:
         start_day = self.start_day_of_1800
         for year_idx in range(1800, year):
             # count all the days of years before this year
             start_day += 366 if self.is_leap_year(year_idx) else 365 
-        return start_day % 7
+        
+        for month_idx in range(1, month+1): # from February to December
+            d = self.get_total_days_of_month(year, month_idx - 1) # if month != "January", sum all the days of previous month
+            start_day += d
+        return start_day % 7 
+            
+        
+            
+        
     
+    
+
     
             
         

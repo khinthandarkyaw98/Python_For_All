@@ -22,7 +22,7 @@ class Output():
             print("{:^{width}}".format(month, width=self.width))
             print(" Sun  Mon  Tue  Wed  Thu  Fri  Sat")
             print(" ", end="")
-            start_day_of_the_month = process.get_start_day(self.year) 
+            start_day_of_the_month = process.get_start_day(self.year, month_idx)
             print(" " * day_width * start_day_of_the_month, end="") 
             total_days_of_month = process.get_total_days_of_month(self.year, month_idx) 
             next_day = start_day_of_the_month
