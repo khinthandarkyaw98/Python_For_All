@@ -13,9 +13,9 @@ class Process():
         return (year % 100 != 0 and year % 4 == 0) or year % 400 == 0
     
     def get_total_days_of_month(self, year:int, month:int) -> int:
-        if month == 4 or month == 6 or month == 9 or month == 11:
+        if month == 3 or month == 8 or month == 5 or month == 10:
             return 30
-        if month == 2:
+        if month == 1: # February
             return 29 if self.is_leap_year(year) else 28
         else:
             return 31

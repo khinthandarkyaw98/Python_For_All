@@ -18,14 +18,13 @@ class Output():
     def print_body(self):
         day_width = 5 # bc "Sun  "
         process = Process()
-        for idx, month in enumerate(process.months):
-            month_count = 2
+        for month_idx, month in enumerate(process.months):
             print("{:^{width}}".format(month, width=self.width))
             print(" Sun  Mon  Tue  Wed  Thu  Fri  Sat")
             print(" ", end="")
-            start_day_of_the_month = process.get_start_day_of_Jan(self.year) if month == "January" else process.get_start_day_of_others(self.year, month_count)
+            start_day_of_the_month = process.get_start_day(self.year) 
             print(" " * day_width * start_day_of_the_month, end="") 
-            total_days_of_month = process.get_total_days_of_month(self.year, month)
+            total_days_of_month = process.get_total_days_of_month(self.year, month_idx) 
             next_day = start_day_of_the_month
             for day in range(1, total_days_of_month + 1):
                 print(format(day, "3d") + "  ", end="")
@@ -33,7 +32,6 @@ class Output():
                 if next_day % 7 == 0:
                     print()
                     print(" ", end="") 
-            month_count += 1
             print("\n\n")
             
             
