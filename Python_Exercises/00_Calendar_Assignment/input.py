@@ -1,10 +1,8 @@
-import datetime
-
-"""
-    /summary/
+"""_summary_
     Only accept the year between 1800 and 
     (the current year + 100 years)
 """
+import datetime
 
 class Input:
     start_year = 1800

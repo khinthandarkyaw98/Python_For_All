@@ -2,11 +2,13 @@ from input import Input
 from process import Process
 from output import Output
 
-Year = Input()
-year = Year.year
-isLeap = Process(year)
-check = isLeap.is_leap_year()
-print_ = Output(year)
-print_.print_header()
+year_object = Input()
+year = year_object.year
+process_object = Process()
+print_output = Output(year)
+print_output.print_header()
+print_output.print_body()
+
+
 
 
